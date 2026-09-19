@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Teté ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TELA 1 -->
+    <section class="tela ativa">
+        <div class="caixa">
+            <div class="loading">████████████████████ 100%</div>
+
+            <h1>🧪 SISTEMA INICIADO</h1>
+
+            <p>Carregando experimento...</p>
+            <p>Analisando dados...</p>
+            <p>Detectando possível rolê...</p>
+
+            <h2>⚠️ ALERTA</h2>
+
+            <p>Uma pessoa chamada <strong>Teté</strong> foi detectada.</p>
+
+            <button onclick="avancarTela()">Continuar ➜</button>
+        </div>
+    </section>
+
+
+    <!-- TELA 2 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>⚠️ AVISO</h1>
+
+            <p>Você está prestes a entrar em um experimento altamente científico.</p>
+
+            <p>Os resultados podem incluir:</p>
+
+            <ul>
+                <li>🍿 Pipoca</li>
+                <li>🎬 Cinema</li>
+                <li>😂 Risadas</li>
+                <li>❤️ Possível romance</li>
+            </ul>
+
+            <p><strong>Deseja continuar?</strong></p>
+
+            <button onclick="avancarTela()">Sim, sou corajosa ➜</button>
+        </div>
+    </section>
+
+
+    <!-- TELA 3 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>🍿 PRIMEIRO TESTE</h1>
+
+            <p>Se você fosse ao cinema...</p>
+
+            <h2>Você dividiria a pipoca comigo?</h2>
+
+            <button onclick="responderPipoca('sim')">Sim 😌</button>
+            <button onclick="responderPipoca('claro')">Óbvio KKKKK</button>
+            <button onclick="responderPipoca('nao')">Não 😭</button>
+
+            <p id="respostaPipoca"></p>
+        </div>
+    </section>
+
+
+    <!-- TELA 4 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>🧠 TESTE DE COMPATIBILIDADE</h1>
+
+            <p>Pergunta 1:</p>
+
+            <h2>Qual seria o melhor programa?</h2>
+
+            <button onclick="responderQuiz(4)">🎬 Cinema</button>
+            <button onclick="responderQuiz(4)">🍔 Comer alguma coisa</button>
+            <button onclick="responderQuiz(4)">🚶 Sair por aí</button>
+        </div>
+    </section>
+
+
+    <!-- TELA 5 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>🧠 TESTE DE COMPATIBILIDADE</h1>
+
+            <p>Pergunta 2:</p>
+
+            <h2>Qual seria o melhor acompanhamento?</h2>
+
+            <button onclick="responderQuiz(5)">🍿 Pipoca</button>
+            <button onclick="responderQuiz(5)">🥤 Refrigerante</button>
+            <button onclick="responderQuiz(5)">🍫 Chocolate</button>
+        </div>
+    </section>
+
+
+    <!-- TELA 6 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>🧠 ÚLTIMA PERGUNTA</h1>
+
+            <h2>Você acha que Gabriel está tentando te chamar pra sair?</h2>
+
+            <button onclick="resultadoQuiz('sim')">SIM 👀</button>
+            <button onclick="resultadoQuiz('óbvio')">ÓBVIO KKKKK</button>
+            <button onclick="resultadoQuiz('não')">Não faço ideia 🤔</button>
+
+            <p id="resultadoQuiz"></p>
+        </div>
+    </section>
+
+
+    <!-- TELA 7 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>📊 RESULTADO</h1>
+
+            <div class="porcentagem">97%</div>
+
+            <h2>COMPATIBILIDADE</h2>
+
+            <p>O sistema chegou a uma conclusão científica:</p>
+
+            <p class="destaque">
+                Vocês deveriam sair juntos. ❤️
+            </p>
+
+            <button onclick="iniciarAnalise()">Continuar ➜</button>
+        </div>
+    </section>
+
+
+    <!-- TELA 8 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>🍿 DECISÃO FINAL</h1>
+
+            <h2>Última pergunta importante:</h2>
+
+            <p>Você dividiria a pipoca comigo no cinema?</p>
+
+            <button onclick="ultimaPipoca('sim')">Sim ❤️</button>
+            <button onclick="ultimaPipoca('claro')">CLARO KKKKK</button>
+            <button onclick="ultimaPipoca('talvez')">Talvez 👀</button>
+
+            <p id="ultimaResposta"></p>
+        </div>
+    </section>
+
+
+    <!-- TELA 9 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>🎰 ROLETA DO DESTINO</h1>
+
+            <p>Escolhendo o destino...</p>
+
+            <div id="roleta">🎰</div>
+
+            <button onclick="girarRoleta()">GIRAR!</button>
+
+            <h2 id="resultadoRoleta"></h2>
+
+            <button onclick="avancarTela()">Aceitar o destino ➜</button>
+        </div>
+    </section>
+
+
+    <!-- TELA 10 -->
+    <section class="tela">
+        <div class="caixa convite">
+            <h1>🎬 CONVITE OFICIAL</h1>
+
+            <p>Prezada Teté,</p>
+
+            <p>
+                Venho por meio deste site extremamente profissional
+                convidá-la oficialmente para:
+            </p>
+
+            <h2>🍿 UM CINEMA COMIGO</h2>
+
+            <p>📅 Sábado</p>
+            <p>🎬 Cinema</p>
+            <p>👤 Gabriel + Teté</p>
+
+            <p class="destaque">
+                Sua presença é extremamente importante. ❤️
+            </p>
+
+            <button onclick="aceitou()">ACEITO 😌</button>
+            <button onclick="recusar()">RECUSAR 😭</button>
+
+            <p id="recusa"></p>
+        </div>
+    </section>
+
+
+    <!-- TELA 11 -->
+    <section class="tela">
+        <div class="caixa ingresso">
+            <h1>🎟️ INGRESSO OFICIAL</h1>
+
+            <div class="ticket">
+                <p>████████████████████</p>
+
+                <h2>GABRIEL + TETÉ</h2>
+
+                <p>🎬 CINEMA</p>
+                <p>📅 SÁBADO</p>
+                <p>🍿 ACESSO VIP</p>
+
+                <h3>TETÉ-LOVE-2026</h3>
+
+                <p>████████████████████</p>
+            </div>
+
+            <button onclick="avancarTela()">Guardar ingresso ➜</button>
+        </div>
+    </section>
+
+
+    <!-- TELA 12 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>💌 UMA MENSAGEM...</h1>
+
+            <p id="mensagem"></p>
+
+            <button onclick="escreverMensagem()">Ler mensagem ❤️</button>
+            <button onclick="avancarTela()">Continuar ➜</button>
+        </div>
+    </section>
+
+
+    <!-- TELA 13 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>🎬 ESCOLHA O FILME</h1>
+
+            <p>Qualquer um desses serve...</p>
+
+            <button onclick="escolherFilme('Filme de terror 👻')">
+                👻 Terror
+            </button>
+
+            <button onclick="escolherFilme('Comédia 😂')">
+                😂 Comédia
+            </button>
+
+            <button onclick="escolherFilme('Romance ❤️')">
+                ❤️ Romance
+            </button>
+
+            <p id="filme"></p>
+
+            <button onclick="continuarFilme()">Continuar ➜</button>
+        </div>
+    </section>
+
+
+    <!-- TELA 14 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>🎞️ TRAILER</h1>
+
+            <div class="trailer">
+                <h2>GABRIEL & TETÉ</h2>
+
+                <p>
+                    Uma história baseada em fatos
+                    que ainda não aconteceram.
+                </p>
+
+                <p>🎬 Em breve...</p>
+                <p>🍿 Pipoca garantida</p>
+                <p>😂 Risadas prováveis</p>
+                <p>❤️ Romance em investigação</p>
+            </div>
+
+            <button onclick="avancarTela()">Continuar ➜</button>
+        </div>
+    </section>
+
+
+    <!-- TELA 15 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>🕵️ INVESTIGAÇÃO SECRETA</h1>
+
+            <p>O sistema encontrou algumas evidências...</p>
+
+            <div id="investigacao">
+                🔎 Clique para investigar.
+            </div>
+
+            <button onclick="investigar()">Investigar 🔎</button>
+            <button onclick="continuarInvestigacao()">Continuar ➜</button>
+        </div>
+    </section>
+
+
+    <!-- TELA 16 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>🤨 TEM CERTEZA?</h1>
+
+            <p>
+                Você realmente acha que isso tudo é coincidência?
+            </p>
+
+            <button onclick="certeza('sim')">
+                Tenho certeza 👀
+            </button>
+
+            <button onclick="certeza('nao')">
+                Talvez não...
+            </button>
+
+            <p id="certezaResposta"></p>
+
+            <button onclick="continuarCerteza()">
+                Continuar ➜
+            </button>
+        </div>
+    </section>
+
+
+    <!-- TELA 17 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>❤️ SEGREDO</h1>
+
+            <p>
+                Existe um segredo nessa página...
+            </p>
+
+            <div class="coracao" onclick="clicarCoracao()">
+                ❤️
+            </div>
+
+            <p id="segredo"></p>
+
+            <button onclick="avancarTela()">
+                Continuar ➜
+            </button>
+        </div>
+    </section>
+
+
+    <!-- TELA 18 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>🚫 NÃO CLIQUE</h1>
+
+            <p>Eu estou falando sério.</p>
+
+            <button onclick="naoClique()">
+                NÃO CLIQUE AQUI
+            </button>
+
+            <p id="naoCliqueResposta"></p>
+
+            <button onclick="avancarTela()">
+                Continuar ➜
+            </button>
+        </div>
+    </section>
+
+
+    <!-- TELA 19 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>🏆 MISSÃO DESBLOQUEADA</h1>
+
+            <h2>
+                MISSÃO: IR AO CINEMA COM TETÉ
+            </h2>
+
+            <p>Recompensa:</p>
+
+            <p class="destaque">
+                Uma noite provavelmente muito divertida. ❤️
+            </p>
+
+            <button onclick="avancarTela()">
+                Aceitar missão ➜
+            </button>
+        </div>
+    </section>
+
+
+    <!-- TELA 20 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>⚠️ NÍVEL DE RISCO</h1>
+
+            <div class="risco">
+                <div class="barra-risco">
+                    <div class="preenchimento"></div>
+                </div>
+            </div>
+
+            <h2>
+                98% DE CHANCE DE DAR CERTO
+            </h2>
+
+            <p>
+                2% reservado para você dizer "não" KKKKK.
+            </p>
+
+            <button onclick="avancarTela()">
+                Próximo ➜
+            </button>
+        </div>
+    </section>
+
+
+    <!-- TELA 21 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>📱 WHATSAPP — CONVERSA VAZADA</h1>
+
+            <div class="whatsapp">
+
+                <p>
+                    <strong>Gabriel:</strong>
+                    Teté, bora no cinema sábado?
+                </p>
+
+                <p>
+                    <strong>Teté:</strong>
+                    🤨
+                </p>
+
+                <p>
+                    <strong>Gabriel:</strong>
+                    Eu fiz um site pra isso.
+                </p>
+
+                <p>
+                    <strong>Teté:</strong>
+                    KKKKKKKKKKK
+                </p>
+
+                <p>
+                    <strong>Gabriel:</strong>
+                    então aceita logo 😭
+                </p>
+
+                <p>
+                    <strong>Teté:</strong>
+                    vou pensar...
+                </p>
+
+                <p>
+                    <strong>Gabriel:</strong>
+                    😐
+                </p>
+
+            </div>
+
+            <button onclick="avancarTela()">
+                Continuar ➜
+            </button>
+        </div>
+    </section>
+
+
+    <!-- TELA 22 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>🔐 CÓDIGO SECRETO</h1>
+
+            <p>
+                Existe um código escondido no ingresso.
+            </p>
+
+            <input
+                type="text"
+                id="codigo"
+                placeholder="Digite o código..."
+            >
+
+            <button onclick="verificarCodigo()">
+                Verificar 🔐
+            </button>
+
+            <p id="resultadoCodigo"></p>
+
+            <button onclick="continuarCodigo()">
+                Continuar ➜
+            </button>
+        </div>
+    </section>
+
+
+    <!-- TELA 23 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>🏆 CONQUISTAS</h1>
+
+            <div class="conquistas">
+                <p>✅ Sobreviveu ao teste</p>
+                <p>✅ Encontrou o convite</p>
+                <p>✅ Viu o ingresso</p>
+                <p>✅ Investigou o caso</p>
+                <p>✅ Chegou ao final</p>
+            </div>
+
+            <h2>
+                🏆 CONQUISTA DESBLOQUEADA
+            </h2>
+
+            <p class="destaque">
+                "Talvez um encontro esteja prestes a acontecer."
+            </p>
+
+            <button onclick="avancarTela()">
+                Continuar ➜
+            </button>
+        </div>
+    </section>
+
+
+    <!-- TELA 24 -->
+    <section class="tela">
+        <div class="caixa">
+            <h1>❤️ MEDIDOR DE ROMANCE</h1>
+
+            <div
+                class="romance-numero"
+                id="romanceNumero">
+                0%
+            </div>
+
+            <div class="barra-romance">
+                <div id="romanceBarra"></div>
+            </div>
+
+            <button onclick="mostrarRomance()">
+                Calcular ❤️
+            </button>
+
+            <button onclick="avancarTela()">
+                Continuar ➜
+            </button>
+        </div>
+    </section>
+
+
+    <!-- TELA 25 -->
+    <section class="tela">
+        <div class="caixa erro">
+
+            <h1>404</h1>
+
+            <h2>
+                ROMANCE NÃO ENCONTRADO
+            </h2>
+
+            <p>
+                O sistema encontrou um pequeno problema...
+            </p>
+
+            <p>Motivo:</p>
+
+            <p class="destaque">
+                Você ainda não aceitou o convite. 😭
+            </p>
+
+            <button onclick="avancarTela()">
+                Tentar novamente 🔄
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- TELA 26 -->
+    <section class="tela">
+        <div class="caixa">
+
+            <h1>🎬 PÓS-CRÉDITOS</h1>
+
+            <p>
+                Obrigado por assistir até aqui.
+            </p>
+
+            <p>
+                Nenhuma inteligência artificial foi maltratada
+                durante a produção deste convite.
+            </p>
+
+            <p>
+                Ou talvez tenha sido. KKKKK
+            </p>
+
+            <button onclick="avancarTela()">
+                Ver final ➜
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- TELA 27 -->
+    <section class="tela">
+        <div class="caixa">
+
+            <h1>🎬 FIM</h1>
+
+            <p class="destaque">
+                Obrigado por chegar até aqui. ❤️
+            </p>
+
+            <p>
+                Mas...
+            </p>
+
+            <button onclick="avancarTela()">
+                Tem mais uma coisa... 👀
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- TELA 28 — PSIU -->
+    <section class="tela">
+        <div class="caixa psiu">
+
+            <h1>🤫 Psiu...</h1>
+
+            <p>
+                Você chegou até o final.
+            </p>
+
+            <p>
+                Então agora eu posso parar com as brincadeiras...
+            </p>
+
+            <p>
+                Eu fiz esse site inteiro só pra te chamar pra sair
+                de um jeito que você provavelmente não esperava. KKKKK
+            </p>
+
+            <p>
+                Mas, no meio de toda essa palhaçada,
+                tem uma coisa que é verdade:
+            </p>
+
+            <h2>
+                Eu queria muito passar esse sábado com você. ❤️
+            </h2>
+
+            <p>
+                Sem teste de compatibilidade.<br>
+                Sem roleta.<br>
+                Sem investigação.<br>
+                Sem código secreto.
+            </p>
+
+            <p class="destaque">
+                Só eu, você e um filme. 🍿🎬
+            </p>
+
+            <p>
+                Então, Teté...
+            </p>
+
+            <h1>
+                Você aceita? 👀❤️
+            </h1>
+
+            <p>
+                — Gabriel
+            </p>
+
+        </div>
+    </section>
+
+
+    <div class="setas">
+
+        <button
+            id="setaVoltar"
+            onclick="voltarTela()">
+            ←
+        </button>
+
+        <button
+            id="setaAvancar"
+            onclick="avancarTela()">
+            →
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
